@@ -10,9 +10,26 @@ int main() {
     Stazione elemento2;
     Stazione elemento3;
 
-    //elemento1.begin("Primo");
-    //elemento2.begin("Secondo");
-    //elemento3.begin("Terzo");
+    elemento1.begin("Primo");
+    elemento2.begin("Secondo");
+    elemento3.begin("Terzo");
+
+    Stazione* elencoPuntatori[0x3];
+
+    elencoPuntatori[0x0] = &elemento1;
+    elencoPuntatori[0x1] = &elemento2;
+    elencoPuntatori[0x2] = &elemento3;
+
+    for (int i=0; i < 3; i++){
+        elencoPuntatori[i]->setId(i);
+    }
+    elencoPuntatori[1]->setId(0xA);
+
+    for (int i=0; i<3; i++){
+        cout << elencoPuntatori[i]->getNome() << ": " << hex << "0x" << elencoPuntatori[i]->getId() << "\n";
+    }
+
+    
 
     Stazione elencoStazioni[0xC];
     elencoStazioni[0x0].begin("Primo");
@@ -42,17 +59,18 @@ int main() {
         i++;
     }
 
-    
+    /*
     for ( Stazione el: elencoStazioni){
         cout << el.getNome() << ": " << hex << el.getId() << "\n";
     }
-    
+    */
+    /*
     int cmd;
     cout << "Inserisci comando: ";
     cin >> hex >> cmd;
 
     cout << elencoStazioni[cmd].getNome() << ": " << elencoStazioni[cmd].getId() << "\n";
-
+    */
     //cout << elemento1.getNome() << ": " << hex << elemento1.getId() << "\n";
     //cout << elemento2.getNome() << ": " << hex << elemento2.getId() << "\n";
     //cout << elemento3.getNome() << ": " << hex << elemento3.getId() << "\n";
