@@ -8,11 +8,13 @@ int main() {
     helloWorld();
     Stazione elemento1;
     Stazione elemento2;
-    Stazione elemento3;
+    Evo elemento3;
 
     elemento1.begin("Primo");
     elemento2.begin("Secondo");
-    elemento3.begin("Terzo");
+    elemento3.begin("Questo è il ", "Terzo", 0x0);
+
+    cout << elemento3.getNome() << "\n";
 
     Stazione* elencoPuntatori[0x3];
 
@@ -30,7 +32,7 @@ int main() {
     }
 
     
-
+    /*
     Stazione elencoStazioni[0xC];
     elencoStazioni[0x0].begin("Primo");
     elencoStazioni[0x1].begin("Secondo");
@@ -44,7 +46,7 @@ int main() {
     elencoStazioni[0x9].begin("Dec");
     elencoStazioni[0xA].begin("Undi");
     elencoStazioni[0xB].begin("Dodic");
-
+    */
 
 
     /*
@@ -53,11 +55,13 @@ int main() {
         elencoStazioni[i].setId(i);
     }
     */
+    /*
     int i = 0;
     for (Stazione el: elencoStazioni){
         elencoStazioni[i].setId(i);
         i++;
     }
+    */
 
     /*
     for ( Stazione el: elencoStazioni){

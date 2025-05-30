@@ -28,3 +28,16 @@ class Stazione {
             _id = id;
         }
 };
+
+class Evo : public Stazione {
+    public:
+        string _surname;
+        void begin(string surname, string nome, int id) {
+        _nome = nome;
+        _id = id;
+        _surname = surname;
+        }
+        string getNome() {
+            return _surname + _nome;
+        }
+};
